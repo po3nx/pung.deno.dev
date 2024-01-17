@@ -30,6 +30,7 @@ export default function Comments({ postId, postComments } : { postId: string, po
   };
 
   const deleteComment = async (id: string) => {
+    console.log(id);
     const response = await fetch("/api/comment", {
       method: "DELETE",
       headers: {
