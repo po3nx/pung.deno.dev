@@ -57,7 +57,7 @@ export default function NavigationBar( props: PageProps) {
     setLoggedin(false);
   }
   const [isOpen, setIsOpen] = useState(false);
-  const isHome = props.url === "/";
+  const isHome = props.url.pathname === "/";
   return (
       <header class="sticky top-0 z-50 bg-white md:bg-opacity-90 backdrop-blur-sm shadow-md px-10">
         <nav className="flex items-center lg:ml-60 flex-1 md:justify-between flex-wrap py-4 px-6 lg:py-0">
