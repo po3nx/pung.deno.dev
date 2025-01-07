@@ -15,8 +15,8 @@ export default function App({ Component, ...pageProps }: AppProps) {
       <body class="bg-white dark:bg-white">
       <main class={`flex flex-col min-h-screen`}>
         <HelloBar />
-        <Header {...pageProps} /> 
-        <Component />
+          <Header Component={Component} {...pageProps} />
+          <Component {...pageProps} />
         
         <Footer />
         </main>
