@@ -2,7 +2,7 @@ import { JSX } from "preact";
 import { IS_BROWSER } from "$fresh/runtime.ts";
 
 export function Input(props: JSX.HTMLAttributes<HTMLInputElement>) {
-  const name = props.name || "";
+  const name = (typeof props.name === 'string') ? props.name : "";
   const displayName = name.charAt(0).toLocaleUpperCase() + name.slice(1);
   return (
     <label for={props.name} class="flex flex-col flex-grow font-bold mb-1">
