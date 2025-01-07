@@ -2,7 +2,8 @@ import { IS_BROWSER } from "$fresh/runtime.ts";
 import { RemotePost } from "../types/Post.ts";
 
 export default function PostItem({ post, id } : { post: RemotePost, id: string }) {
-  let d = new Date(post.date['@ts'])
+  const dateStr = post.date['@ts'];
+  let d = new Date(dateStr);
   var datestring = d.getDate()  + "/" + (d.getMonth()+1) + "/" + d.getFullYear()
   return (
     <div class="py-16 grid sm:grid-cols-4 gap-4">
