@@ -31,9 +31,11 @@ jobs:
         with:
           deno-version: v1.x
 
-      # Uncomment this step to verify the use of 'deno fmt' on each commit.
       - name: Verify formatting
-        run: deno check
+        run: deno fmt --check
 
-      - name: Run build
-        run: deno build
+      - name: Run Check TS
+        run: deno check **/*.ts
+
+      - name: Run Check TSX
+        run: deno check **/*.tsx
