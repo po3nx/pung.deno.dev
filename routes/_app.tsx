@@ -2,7 +2,7 @@ import { AppProps,PageProps } from "$fresh/server.ts";
 import Header from "../components/Header.tsx";
 import Footer from "../components/Footer.tsx";
 import { CSS } from "gfm";
-export default function App({ Component }: AppProps) {
+export default function App({ Component, ...pageProps }: AppProps) {
   return (
     <html>
       <head>
@@ -15,7 +15,7 @@ export default function App({ Component }: AppProps) {
       <body class="bg-white dark:bg-white">
       <main class={`flex flex-col min-h-screen`}>
         <HelloBar />
-        <Header />
+        <Header {...pageProps}  />
         <Component />
         
         <Footer />
