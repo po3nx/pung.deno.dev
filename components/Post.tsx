@@ -22,7 +22,7 @@ export default function Post({ post } : { post: RemotePost }) {
     }
   }
   const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-  let d = new Date(post.date.value)
+  let d = new Date(post.date);
   var datestring =  (months[d.getMonth()]) + " "+ d.getDate() +", " + d.getFullYear()
   const markup = render(post.content)
   return (
