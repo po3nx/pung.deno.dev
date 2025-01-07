@@ -7,9 +7,9 @@ import Features from "../components/Features.tsx";
 export default function MainPage() { 
   return (
     <div >
-      <Hero class="bg-gray-800 flex-col" />
+      <Hero />
       <div class="flex-1 bg-white mx-auto">
-          <Intro  />
+          <Intro origin="some-origin-string" />
       </div>
       <div class="flex-1 bg-gray-900 dark:bg-darker">
         <Features />
